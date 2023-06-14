@@ -1,0 +1,18 @@
+<div class="d-flex gap-4 detail-div">
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="detail font" let itemPro>
+    <img src="{{ itemPro.image }}" alt="" />
+    <div>
+      <p>Tên sản phẩm: {{ itemPro.name }}</p>
+      <p>Giá: {{ itemPro.price }}đ</p>
+      <div> Số lượng:
+        <button class="btn btn-light">-</button>
+        <span>0</span>
+        <button class="btn btn-light">+</button>
+      </div>
+      <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.admin {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.size {
+  width: 5%;
+}
+
+.sidebar {
+  height: 93vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.list-group {
+  width: 300px;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  width: 8%;
+  margin-right: 10px;
+}
+
+.main {
+  width: 100%;
+}

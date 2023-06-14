@@ -1,0 +1,14 @@
+<div class="sidebar">
+  <ul class="list-group">
+    <li class="list-group-item active">
+      <a routerLink="/products">All</a>
+    </li>
+  </ul>
+  <ul class="list-group" *ngFor="let item of data">
+    <li class="list-group-item">
+      <a routerLink="/products/{{ item.id }}" routerLinkActive="active">{{
+        item.name
+      }}</a>
+    </li>
+  </ul>
+</div>

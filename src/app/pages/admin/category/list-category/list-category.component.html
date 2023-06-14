@@ -1,0 +1,23 @@
+<h3 class="">Danh mục sản phẩm</h3>
+<button class="btn btn-primary" routerLink="/admin/category/add">
+  Thêm danh mục
+</button>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tên danh mục</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of data; index as idx">
+    <tr>
+      <th scope="row">{{ idx + 1 }}</th>
+      <td>{{ item.name }}</td>
+      <td>
+        <button class="btn btn-warning mx-2" (click)="removeCate(item.id)">Xóa</button>
+        <button class="btn btn-danger">Sửa</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,92 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "cateId": 1,
+      "name": "Product 1",
+      "price": 100,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLx77ztv1ATlue3CVbpk9pOyP65eto4L_ZDQ&usqp=CAU"
+    },
+    {
+      "id": 2,
+      "cateId": 3,
+      "name": "Product 2",
+      "price": 200,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD0CSI8ewTUN_PN84R6Uv8iChWzaFb0PbXdBQmZETXCyw9yj2qpclKTCl33vCxVsh5P24&usqp=CAU"
+    },
+    {
+      "id": 3,
+      "cateId": 3,
+      "name": "Product 3",
+      "price": 300,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzc7gNFW2QRIWxDjYMUcGLLyI_q9_kpu0SWg&usqp=CAU"
+    },
+    {
+      "id": 4,
+      "cateId": 1,
+      "name": "Product 4",
+      "price": 400,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMhuMS4ZmG9LFU1GRYWoNwjIWvqkoLHlLvDg&usqp=CAU"
+    },
+    {
+      "id": 5,
+      "cateId": 2,
+      "name": "Product 1",
+      "price": 100,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNjXL-Zp1vvz_3-5DgtrfKsiNvR3OhVjx_QN4xWEFhcVsq-PIQ3K2Noh4ZWqK-c6ONuOE&usqp=CAU"
+    },
+    {
+      "id": 6,
+      "cateId": 3,
+      "name": "Product 2",
+      "price": 200,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3m42RJShwn6ger_5TzGp8pkLErT0QBzScBw&usqp=CAU"
+    },
+    {
+      "id": 7,
+      "cateId": 3,
+      "name": "Product 3",
+      "price": 300,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuPHiFjuctkrWW56sX_Ni0kBHeo4Z_agXbCg&usqp=CAU"
+    },
+    {
+      "id": 8,
+      "cateId": 2,
+      "name": "Product 4",
+      "price": 400,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaaVpDnPImeSK7lnIyWqN0rygpcnaxg7C7vQ&usqp=CAU"
+    },
+    {
+      "id": 9,
+      "cateId": 1,
+      "name": "Product 4",
+      "price": 400,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvt_UbRUW7k8H_OgUrhAwAtgiKIHNZRAl8SQ&usqp=CAU"
+    },
+    {
+      "id": 10,
+      "cateId": 1,
+      "name": "Product 4",
+      "price": 400,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyVIKw8AAyPH1qp-mY84hizHUVeCUlje_JmA&usqp=CAU"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Áo hoodie"
+    },
+    {
+      "id": 2,
+      "name": "Quần âu"
+    },
+    {
+      "id": 3,
+      "name": "Áo sơ mi"
+    },
+    {
+      "name": "Áo Hoodie12",
+      "id": 4
+    }
+  ]
+}
