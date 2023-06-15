@@ -1,5 +1,5 @@
 <h3>Cập nhật danh mục</h3>
-<form #myForm="ngForm">
+<form #myForm="ngForm" [formGroup]="nameCate">
   <div class="form-group">
     <label for="exampleInputEmail1">Tên danh mục</label>
     <input
@@ -7,14 +7,39 @@
       class="form-control"
       name="name"
       placeholder="..."
-      ngModel
+      ngModel="{{ cateData?.name }}"
+      formControlName="name"
     />
+    <div
+      *ngIf="
+        (funcControl['name'].touched || funcControl['name'].dirty) &&
+        funcControl['name'].invalid
+      "
+    >
+      <div
+        *ngIf="
+          funcControl['name'].errors && funcControl['name'].errors['required']
+        "
+      >
+        <span class="validate">Tên danh mục không để trống</span>
+      </div>
+      <div
+        *ngIf="
+          funcControl['name'].errors && funcControl['name'].errors['minLength']
+        "
+      >
+        <span class="validate">Tên danh mục ít nhất 8 ký tự</span>
+      </div>
+    </div>
   </div>
-  <button
-    type="submit"
-    class="btn btn-primary mt-3"
-    (click)="updateCategory(myForm.value)"
-  >
-    Cập nhật
-  </button>
+  <!-- nếu không qua validate thì không hiển thị button -->
+  <div *ngIf="nameCate.valid">
+    <button
+      type="submit"
+      class="btn btn-primary mt-3"
+      (click)="updateCategory(myForm.value)"
+    >
+      Thêm
+    </button>
+  </div>
 </form>

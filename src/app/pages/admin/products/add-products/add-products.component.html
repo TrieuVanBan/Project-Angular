@@ -1,1 +1,93 @@
-<p>add-products works!</p>
+<h3>Thêm sản phẩm</h3>
+<form #myForm="ngForm" [formGroup]="validPro">
+  <label for="exampleInputEmail1">Danh mục</label>
+  <select
+    class="form-select"
+    aria-label="Default select example"
+    style="width: 20%; padding-left: 0"
+    name="cateId"
+    ngModel
+    formControlName="cateId"
+  >
+    <option *ngFor="let item of data" value="{{ item.id }}">
+      {{ item.name }}
+    </option>
+  </select>
+  <div *ngIf="(funcControl['cateId'].touched || funcControl['cateId'].dirty) && funcControl['cateId'].invalid">
+    <div *ngIf="funcControl['cateId'].errors && funcControl['cateId'].errors['required']">
+      <span class="validate">Tên danh mục không để trống</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Tên sản phẩm</label>
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      placeholder="..."
+      ngModel
+      formControlName="name"
+    />
+    <div *ngIf="(funcControl['name'].touched || funcControl['name'].dirty) && funcControl['name'].invalid">
+      <div *ngIf="funcControl['name'].errors && funcControl['name'].errors['required']">
+        <span class="validate">Tên danh mục không để trống</span>
+      </div>
+      <div *ngIf="funcControl['name'].errors && funcControl['name'].errors['minLength']">
+        <span class="validate">Tên danh mục ít nhất 8 ký tự</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Giá sản phẩm</label>
+    <input
+      type="text"
+      class="form-control"
+      name="price"
+      placeholder="..."
+      ngModel
+      formControlName="price"
+    />
+    <div *ngIf="(funcControl['price'].touched || funcControl['price'].dirty) && funcControl['price'].invalid">
+      <div *ngIf="funcControl['price'].errors && funcControl['price'].errors['required']">
+        <span class="validate">Tên danh mục không để trống</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Ảnh sản phẩm</label>
+    <input
+      type="text"
+      class="form-control"
+      name="image"
+      placeholder="..."
+      ngModel
+      formControlName="image"
+    />
+    <div *ngIf="(funcControl['image'].touched || funcControl['image'].dirty) && funcControl['image'].invalid">
+      <div *ngIf="funcControl['image'].errors && funcControl['image'].errors['required']">
+        <span class="validate">Tên danh mục không để trống</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- nếu không qua validate thì không hiển thị button -->
+  <div *ngIf="validPro.valid">
+    <button
+      type="submit"
+      class="btn btn-primary mt-3"
+      (click)="addProduct(myForm.value)"
+    >
+      Thêm
+    </button>
+  </div>
+  <!-- <button
+    type="submit"
+    class="btn btn-primary mt-3"
+    (click)="addProduct(myForm.value)"
+  >
+    Thêm
+  </button> -->
+</form>

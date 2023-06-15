@@ -1,5 +1,6 @@
 export interface Product {
   id: number;
+  cateId: any;
   name: string;
   price: number;
   image: string;

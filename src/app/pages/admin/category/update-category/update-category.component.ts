@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Category } from 'src/app/model/product.model';
 import { RestapiService } from 'src/app/service/restapi.service';
 
 @Component({
@@ -8,17 +10,32 @@ import { RestapiService } from 'src/app/service/restapi.service';
   styleUrls: ['./update-category.component.scss']
 })
 export class UpdateCategoryComponent implements OnInit {
+  cateData: undefined | Category;
+  id: any
 
-  constructor(private restapiService: RestapiService, private router: Router) { }
+  nameCate = this.builderForm.group({
+    "name": ["", [Validators.required, Validators.minLength(8)]]
+  })
+
+  get funcControl() {
+    return this.nameCate.controls
+  }
+
+  constructor(private restapiService: RestapiService, private router: ActivatedRoute, private navigate: Router, private builderForm: FormBuilder) { }
 
   ngOnInit(): void {
-
+    let cateId = this.router.snapshot.paramMap.get("id");
+    cateId && this.restapiService.getIdCate(cateId).subscribe((data) => {
+      // console.log(data);
+      this.cateData = data
+    })
+    this.id = cateId
   }
 
   updateCategory(value: any) {
-    this.restapiService.addCategory(value).subscribe((res: any) => {
+    this.restapiService.updateCate({ ...value, id: this.id }).subscribe((res: any) => {
       // console.log(res);
-      // this.router.navigateByUrl("/admin/category")
+      this.navigate.navigateByUrl("/admin/category")
     })
   }
 }

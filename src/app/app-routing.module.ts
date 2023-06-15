@@ -12,6 +12,9 @@ import { ListCategoryComponent } from './pages/admin/category/list-category/list
 import { ListProductsComponent } from './pages/admin/products/list-products/list-products.component';
 import { ListUserComponent } from './pages/admin/users/list-user/list-user.component';
 import { AddCategoryComponent } from './pages/admin/category/add-category/add-category.component';
+import { UpdateCategoryComponent } from './pages/admin/category/update-category/update-category.component';
+import { AddProductsComponent } from './pages/admin/products/add-products/add-products.component';
+import { UpdateProductsComponent } from './pages/admin/products/update-products/update-products.component';
 
 const routes: Routes = [
   {
@@ -53,8 +56,20 @@ const routes: Routes = [
         component: AddCategoryComponent,
       },
       {
+        path: 'category/update/:id',
+        component: UpdateCategoryComponent,
+      },
+      {
         path: 'products',
         component: ListProductsComponent,
+      },
+      {
+        path: 'products/add',
+        component: AddProductsComponent,
+      },
+      {
+        path: 'products/update/:id',
+        component: UpdateProductsComponent,
       },
       {
         path: 'users',

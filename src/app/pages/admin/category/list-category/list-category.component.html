@@ -15,8 +15,12 @@
       <th scope="row">{{ idx + 1 }}</th>
       <td>{{ item.name }}</td>
       <td>
-        <button class="btn btn-warning mx-2" (click)="removeCate(item.id)">Xóa</button>
-        <button class="btn btn-danger">Sửa</button>
+        <button class="btn btn-warning mx-2" (click)="removeCate(item.id)">
+          Xóa
+        </button>
+        <button class="btn btn-danger" routerLink="/admin/category/update/{{ item.id }}">
+          Sửa
+        </button>
       </td>
     </tr>
   </tbody>

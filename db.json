@@ -64,29 +64,25 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvt_UbRUW7k8H_OgUrhAwAtgiKIHNZRAl8SQ&usqp=CAU"
     },
     {
-      "id": 10,
-      "cateId": 1,
-      "name": "Product 4",
-      "price": 400,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyVIKw8AAyPH1qp-mY84hizHUVeCUlje_JmA&usqp=CAU"
+      "name": "Quần Jean  Slim update 1",
+      "price": "1200000000",
+      "image": "https://lzd-img-global.slatic.net/g/p/f14d637731b152efa3b24a7742624c43.jpg_200x200q80.jpg_.webp",
+      "cateId": "2",
+      "id": 11
     }
   ],
   "category": [
     {
-      "id": 1,
-      "name": "Áo hoodie"
+      "name": "Áo hoodie",
+      "id": 1
     },
     {
       "id": 2,
       "name": "Quần âu"
     },
     {
-      "id": 3,
-      "name": "Áo sơ mi"
-    },
-    {
-      "name": "Áo Hoodie12",
-      "id": 4
+      "name": "Áo sơ mi",
+      "id": 3
     }
   ]
 }
