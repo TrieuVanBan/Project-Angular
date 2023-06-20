@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Category } from 'src/app/model/product.model';
+import { ToastrService } from 'ngx-toastr';
 import { RestapiService } from 'src/app/service/restapi.service';
 
 @Component({
@@ -23,7 +24,7 @@ export class AddProductsComponent implements OnInit {
     return this.validPro.controls
   }
 
-  constructor(private restapiService: RestapiService, private router: Router, private builderForm: FormBuilder) { }
+  constructor(private restapiService: RestapiService, private router: Router, private builderForm: FormBuilder,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getAllCate()
@@ -41,8 +42,8 @@ export class AddProductsComponent implements OnInit {
     console.log(value);
 
     this.restapiService.addProduct(value).subscribe((res) => {
-      console.log(res);
-      alert("Bạn đã thêm sản phẩm thành công!")
+      // console.log(res);
+      this.toastr.success("Thêm sản phẩm thành công !", "Success")
       this.router.navigateByUrl("/admin/products")
     })
   }

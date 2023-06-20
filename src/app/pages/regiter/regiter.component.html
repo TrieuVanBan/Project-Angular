@@ -12,45 +12,69 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Đăng ký</h2>
 
-              <form>
-
+              <form [formGroup]="registerForm" (ngSubmit)="registerOnsubmit()">
                 <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3cg">Email</label>
                   <input
                     type="email"
                     id="form3Example3cg"
                     class="form-control form-control-lg"
+                    formControlName="email"
                   />
-                  <label class="form-label" for="form3Example3cg"
-                    >Email</label
-                  >
+                  <div *ngIf="(funcControl['email'].touched || funcControl['email'].dirty) && funcControl['email'].invalid">
+                    <div *ngIf="funcControl['email'].errors && funcControl['email'].errors['required']">
+                      <span class="validate">Email không để trống</span>
+                    </div>
+                    <div *ngIf="funcControl['email'].errors && funcControl['email'].errors['email']">
+                      <span class="validate">Email không đúng định dạng</span>
+                    </div>
+                  </div>
                 </div>
-
                 <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example4cg"
+                    >Mật khẩu</label
+                  >
                   <input
                     type="password"
                     id="form3Example4cg"
                     class="form-control form-control-lg"
+                    formControlName="password"
                   />
-                  <label class="form-label" for="form3Example4cg"
-                    >Mật khẩu</label
-                  >
+                  <div *ngIf="(funcControl['password'].touched || funcControl['password'].dirty) && funcControl['password'].invalid">
+                    <div *ngIf="funcControl['password'].errors && funcControl['password'].errors['required']">
+                      <span class="validate">Mật khẩu không để trống</span>
+                    </div>
+                    <div *ngIf="funcControl['password'].errors && funcControl['password'].errors['minlength']">
+                      <span class="validate">Mật khẩu ít nhất 8 ký tự</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example4cdg"
+                    >Nhập lại mật khẩu</label
+                  >
                   <input
                     type="password"
                     id="form3Example4cdg"
                     class="form-control form-control-lg"
+                    formControlName="confirmPassword"
                   />
-                  <label class="form-label" for="form3Example4cdg"
-                    >Nhập lại mật khẩu</label
-                  >
+                  <div *ngIf="(funcControl['confirmPassword'].touched || funcControl['confirmPassword'].dirty) && funcControl['confirmPassword'].invalid">
+                    <div *ngIf="funcControl['confirmPassword'].errors && funcControl['confirmPassword'].errors['required']">
+                      <span class="validate">Mật khẩu không để trống</span>
+                    </div>
+                    <div *ngIf="funcControl['confirmPassword'].errors && funcControl['confirmPassword'].getError('Mutmatch')!=null">
+                      <span class="validate">Mật khẩu không trùng khớp</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="d-flex justify-content-center">
                   <button
-                    type="button"
+                    type="submit"
                     class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                    [disabled]="!registerForm.valid"
                   >
                     Đăng ký
                   </button>

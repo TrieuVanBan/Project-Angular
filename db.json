@@ -64,10 +64,10 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvt_UbRUW7k8H_OgUrhAwAtgiKIHNZRAl8SQ&usqp=CAU"
     },
     {
-      "name": "Quần Jean  Slim update 1",
-      "price": "1200000000",
+      "name": "Quần Jean",
+      "price": "12000",
       "image": "https://lzd-img-global.slatic.net/g/p/f14d637731b152efa3b24a7742624c43.jpg_200x200q80.jpg_.webp",
-      "cateId": "2",
+      "cateId": "3",
       "id": 11
     }
   ],
@@ -83,6 +83,13 @@
     {
       "name": "Áo sơ mi",
       "id": 3
+    }
+  ],
+  "user": [
+    {
+      "email": "ban21032002@gmail.com",
+      "password": "12345678",
+      "id": 1
     }
   ]
 }

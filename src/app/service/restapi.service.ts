@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product, Category } from '../model/product.model';
+import { Auth } from '../model/auth.model';
 
 // const apiUrl = 'http://localhost:3000/products';
 
@@ -60,5 +61,19 @@ export class RestapiService {
 
   updateCate(dataCate: any) {
     return this.http.put<Category[]>("http://localhost:3000/category/" + dataCate.id, dataCate)
+  }
+
+  // user
+  listUsers(): Observable<Auth[]> {
+    return this.http.get<Auth[]>("http://localhost:3000/user")
+  }
+
+  register(dataUser: any) {
+    return this.http.post("http://localhost:3000/user", dataUser)
+  }
+
+  // Login
+  getUserByEmail(user: any) {
+    return this.http.get("http://localhost:3000/user/" + user)
   }
 }

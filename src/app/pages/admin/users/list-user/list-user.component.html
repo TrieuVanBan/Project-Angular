@@ -1,1 +1,28 @@
-<p>list-user works!</p>
+<h3 class="">Danh sách tài khoản</h3>
+<!-- <button class="btn btn-primary" routerLink="/admin/category/add">
+  Thêm danh mục
+</button> -->
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Email</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of users; index as idx">
+    <tr>
+      <th scope="row">{{ idx + 1 }}</th>
+      <td>{{ item.email }}</td>
+      <td>
+        <button class="btn btn-warning mx-2">
+          Xóa
+        </button>
+        <button class="btn btn-danger">
+          Sửa
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
