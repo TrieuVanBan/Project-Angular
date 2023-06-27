@@ -7,13 +7,15 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Email</th>
+      <th scope="col">Chức vụ</th>
       <th scope="col"></th>
     </tr>
   </thead>
-  <tbody *ngFor="let item of users; index as idx">
+  <tbody *ngFor="let item of users | paginate: { itemsPerPage: 10, currentPage: p }; index as idx">
     <tr>
       <th scope="row">{{ idx + 1 }}</th>
       <td>{{ item.email }}</td>
+      <td >{{ item.role === 1 ? 'Quản trị viên' : 'Người dùng' }}</td>
       <td>
         <button class="btn btn-warning mx-2">
           Xóa
@@ -25,4 +27,5 @@
     </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event" class="d-flex justify-content-end"></pagination-controls>
 

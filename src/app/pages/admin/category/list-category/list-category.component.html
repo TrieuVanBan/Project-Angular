@@ -10,7 +10,7 @@
       <th scope="col"></th>
     </tr>
   </thead>
-  <tbody *ngFor="let item of data; index as idx">
+  <tbody *ngFor="let item of data | paginate: { itemsPerPage: 10, currentPage: p }; index as idx">
     <tr>
       <th scope="row">{{ idx + 1 }}</th>
       <td>{{ item.name }}</td>
@@ -25,3 +25,4 @@
     </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event" class="d-flex justify-content-end"></pagination-controls>

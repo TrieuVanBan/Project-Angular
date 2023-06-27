@@ -10,6 +10,7 @@ import { RestapiService } from 'src/app/service/restapi.service';
 export class ListCategoryComponent {
   data: Category[] = [];
   id: any;
+  p: number = 1
 
   constructor(private restapiService: RestapiService) { }
 

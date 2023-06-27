@@ -65,15 +65,15 @@ export class RestapiService {
 
   // user
   listUsers(): Observable<Auth[]> {
-    return this.http.get<Auth[]>("http://localhost:3000/user")
+    return this.http.get<Auth[]>("http://localhost:3000/users")
   }
 
   register(dataUser: any) {
-    return this.http.post("http://localhost:3000/user", dataUser)
+    return this.http.post("http://localhost:3000/register", dataUser)
   }
 
   // Login
-  getUserByEmail(user: any) {
-    return this.http.get("http://localhost:3000/user/" + user)
+  login(user: any) {
+    return this.http.post("http://localhost:3000/login" , user)
   }
 }

@@ -26,7 +26,7 @@ export class RegiterComponent implements OnInit {
     email: this.builderForm.control('', Validators.compose([Validators.required, Validators.email])),
     password: this.builderForm.control('', Validators.compose([Validators.required, Validators.minLength(8)])),
     confirmPassword: this.builderForm.control('', Validators.compose([Validators.required])),
-    role: this.builderForm.control('')
+    role: this.builderForm.control('0')
   },
     { validators: this.Mutmatch('password', 'confirmPassword') }
   )

@@ -8,8 +8,9 @@ import { RestapiService } from 'src/app/service/restapi.service';
   styleUrls: ['./list-user.component.scss']
 })
 export class ListUserComponent implements OnInit {
-
+  p: number = 1
   users: Auth[] = []
+  
   constructor(private restapiService: RestapiService) { }
 
   ngOnInit(): void {

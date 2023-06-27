@@ -85,11 +85,18 @@
       "id": 3
     }
   ],
-  "user": [
+  "users": [
+    {
+      "email": "banbb@gmail.com",
+      "password": "$2a$10$RzNVCQT8clsvgtdAzGoKVuVxs5QZe9Sh6neWNfgMFw/OWJ.I.s0zW",
+      "role": 1,
+      "id": 1
+    },
     {
       "email": "ban21032002@gmail.com",
-      "password": "12345678",
-      "id": 1
+      "password": "$2a$10$Cq.mcQLAEi6BXQYccLb8kOO5lo3b.ge3HjHxTaLAqqMHbWJG84aKy",
+      "role": "0",
+      "id": 2
     }
   ]
 }

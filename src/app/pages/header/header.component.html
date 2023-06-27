@@ -1,4 +1,4 @@
-<div class="d-flex align-items-center row">
+<!-- <div class="d-flex align-items-center row">
   <div class="col">
     <img
       src="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/06090103/logo-shop-qu%E1%BA%A7n-%C3%A1o-8.png"
@@ -40,4 +40,51 @@
       />
     </svg>
   </div>
-</div>
+</div> -->
+
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo">
+      <h1 class="text-light">
+        <a href="index.html"><span>Ninestars</span></a>
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li>
+          <a
+            class="nav-link scrollto"
+            routerLink="/"
+            >Trang chủ</a
+          >
+        </li>
+        <li><a class="nav-link scrollto" routerLink="/products">Sản phẩm</a></li>
+        <li><a class="nav-link scrollto" routerLink="/news">Tin tức</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- .navbar -->
+  </div>
+  <div class="col">
+    <a routerLink="/login" class="signin">Signin</a>
+    <a routerLink="/register" class="signup">Signup</a>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="icon"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+      />
+    </svg>
+  </div>
+</header>
+<!-- End Header -->

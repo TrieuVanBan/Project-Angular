@@ -22,13 +22,15 @@ export class LoginComponent {
 
 
   loginOnsubmit() {
-
-    this.restApi.getUserByEmail(this.loginForm.value.email).subscribe((res: any) => {
+    this.restApi.login(this.loginForm.value).subscribe((res: any) => {
+      localStorage.setItem('user', JSON.stringify(res));
       this.userData = res
-      console.log(this.userData);
+      console.log(res.user);
 
-      // this.toastr.success("Bạn đã đăng ký thành công !", "Success")
-      // this.router.navigateByUrl("/login")
+      this.toastr.success("Bạn đã đăng nhập thành công !", "Success")
+      if (res.user.role === 1) {
+        this.router.navigateByUrl("/admin")
+      }
     })
   }
 
