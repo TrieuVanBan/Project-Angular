@@ -14,6 +14,7 @@ export class ProductsComponent {
   cateId: any;
   data: Product[] = [];
   dataProduct: any;
+  searchText =  ""
 
   constructor(private restapiService: RestapiService, private activateRoute: ActivatedRoute, private cartService: CartService, private toastr: ToastrService) { }
 
@@ -21,7 +22,6 @@ export class ProductsComponent {
     this.getAll();
     this.activateRoute.paramMap.subscribe(params => {
       this.cateId = params.get('id');
-      console.log(this.cateId);
       this.getProductCatId(this.cateId);
     })
     // this.getProductCatId(this.cateId);
