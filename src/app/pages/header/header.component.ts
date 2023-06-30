@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  user: any
 
+  constructor() { }
+
+  ngOnInit(): void {
+    let localUser = localStorage.getItem("user")
+    if (localUser) {
+      this.user = JSON.parse(localUser)
+    }
+    this.user = this.user.user.email
+    console.log(this.user);
+  }
 }

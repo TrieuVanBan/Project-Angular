@@ -15,6 +15,7 @@ import { AddCategoryComponent } from './pages/admin/category/add-category/add-ca
 import { UpdateCategoryComponent } from './pages/admin/category/update-category/update-category.component';
 import { AddProductsComponent } from './pages/admin/products/add-products/add-products.component';
 import { UpdateProductsComponent } from './pages/admin/products/update-products/update-products.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
         path: 'detail/:id',
         component: DetailComponent,
       },
+      {
+        path: 'cart',
+        component: CartComponent,
+      }
     ]
   },
   {

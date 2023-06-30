@@ -26,6 +26,7 @@ import { ListProductsComponent } from './pages/admin/products/list-products/list
 import { AddProductsComponent } from './pages/admin/products/add-products/add-products.component';
 import { UpdateProductsComponent } from './pages/admin/products/update-products/update-products.component';
 import { ListUserComponent } from './pages/admin/users/list-user/list-user.component';
+import { CartComponent } from './pages/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { ListUserComponent } from './pages/admin/users/list-user/list-user.compo
     AddProductsComponent,
     UpdateProductsComponent,
     ListUserComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

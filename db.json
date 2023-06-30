@@ -11,7 +11,7 @@
       "id": 2,
       "cateId": 3,
       "name": "Product 2",
-      "price": 200,
+      "price": 200111,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD0CSI8ewTUN_PN84R6Uv8iChWzaFb0PbXdBQmZETXCyw9yj2qpclKTCl33vCxVsh5P24&usqp=CAU"
     },
     {
@@ -39,7 +39,7 @@
       "id": 6,
       "cateId": 3,
       "name": "Product 2",
-      "price": 200,
+      "price": 2001144,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3m42RJShwn6ger_5TzGp8pkLErT0QBzScBw&usqp=CAU"
     },
     {
@@ -53,7 +53,7 @@
       "id": 8,
       "cateId": 2,
       "name": "Product 4",
-      "price": 400,
+      "price": 40045656,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaaVpDnPImeSK7lnIyWqN0rygpcnaxg7C7vQ&usqp=CAU"
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "name": "Quần Jean",
-      "price": "12000",
+      "price": 12000000,
       "image": "https://lzd-img-global.slatic.net/g/p/f14d637731b152efa3b24a7742624c43.jpg_200x200q80.jpg_.webp",
       "cateId": "3",
       "id": 11

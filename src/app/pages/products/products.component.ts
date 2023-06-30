@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/model/product.model';
 import { ActivatedRoute } from '@angular/router';
 import { RestapiService } from 'src/app/service/restapi.service';
+import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-products',
@@ -9,11 +11,11 @@ import { RestapiService } from 'src/app/service/restapi.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
-  cateId: any
+  cateId: any;
   data: Product[] = [];
-  dataProduct: any
+  dataProduct: any;
 
-  constructor(private restapiService: RestapiService, private activateRoute: ActivatedRoute) { }
+  constructor(private restapiService: RestapiService, private activateRoute: ActivatedRoute, private cartService: CartService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getAll();
@@ -39,6 +41,19 @@ export class ProductsComponent {
         this.data = res
       })
     }
+  }
+
+  addProductToCart(product: any) {
+    let cartItem: any = {
+      id: product.id,
+      name: product.name,
+      image: product.image,
+      price: product.price,
+      quantity: 1,
+      check: product.check = false
+    }
+    this.cartService.addToCart(cartItem)
+    this.toastr.success("Sản phẩm đã được thêm vào giỏ hàng !", "Success")
 
   }
 }
