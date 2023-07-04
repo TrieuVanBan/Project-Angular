@@ -17,6 +17,7 @@ export class CartComponent {
   ngOnInit(): void {
     this.cartItems = this.cartService.getItems()
   }
+
   onChangeQuantity(index: number, product: any, event: any): void {
     const newProduct = { ...product, quantity: parseInt(event.target.value) }
     this.cartService.updateProductCart(newProduct)
@@ -39,14 +40,23 @@ export class CartComponent {
     const id = e.target.value
     const isChecked = e.target.checked
 
-    const mapArr = this.cartItems.map((item) => {
+    this.cartItems.map((item) => {
       if (item.id == id) {
-        item.check = isChecked
-        return item
+        if (isChecked == true) {
+          this.total = item.price * item.quantity
+          console.log(this.total);
+        } else {
+          
+        }
       }
-      return item
+
+
+      // if (item.id == id) {
+      //   item.check = isChecked
+      //   return item
+      // }
+      // return item
     })
-    console.log(mapArr);
 
 
     // this.cartItems.filter((item) => {

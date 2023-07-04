@@ -6,13 +6,11 @@
     <img src="{{ itemPro.image }}" alt="" />
     <div>
       <p>Tên sản phẩm: {{ itemPro.name }}</p>
-      <p>Giá: {{ itemPro.price }}đ</p>
-      <div> Số lượng:
-        <button class="btn btn-light">-</button>
-        <span>0</span>
-        <button class="btn btn-light">+</button>
-      </div>
-      <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+      <p>Giá: {{ itemPro.price | currency : "VND" | lowercase }}</p>
+      <p> Số lượng:
+        <input type="number" min="1" value="1" class="form-control" (change)="onChaneQuantity(itemPro, $event)">
+      </p>
+      <button class="btn btn-primary" style="margin-top:20px" (click)="addProductToCart(itemPro)">Thêm vào giỏ hàng</button>
     </div>
   </div>
 </div>

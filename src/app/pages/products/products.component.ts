@@ -54,6 +54,5 @@ export class ProductsComponent {
     }
     this.cartService.addToCart(cartItem)
     this.toastr.success("Sản phẩm đã được thêm vào giỏ hàng !", "Success")
-
   }
 }
