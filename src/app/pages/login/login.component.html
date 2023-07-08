@@ -23,7 +23,16 @@
                     class="form-control form-control-lg"
                     formControlName="email"
                   />
+                  <div *ngIf="(funcControl['email'].touched || funcControl['email'].dirty) && funcControl['email'].invalid">
+                    <div *ngIf="funcControl['email'].errors && funcControl['email'].errors['required']">
+                      <span class="validate">Email không để trống</span>
+                    </div>
+                    <div *ngIf="funcControl['email'].errors && funcControl['email'].errors['email']">
+                      <span class="validate">Email không đúng định dạng</span>
+                    </div>
+                  </div>
                 </div>
+
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4cg"
@@ -35,21 +44,35 @@
                     class="form-control form-control-lg"
                     formControlName="password"
                   />
+                  <div *ngIf="(funcControl['password'].touched || funcControl['password'].dirty) && funcControl['password'].invalid">
+                    <div *ngIf="funcControl['password'].errors && funcControl['password'].errors['required']">
+                      <span class="validate">Mật khẩu không để trống</span>
+                    </div>
+                    <div *ngIf="funcControl['password'].errors && funcControl['password'].errors['minlength']">
+                      <span class="validate">Mật khẩu ít nhất 8 ký tự</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="d-flex justify-content-center">
                   <button
                     type="submit"
                     class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                    [disabled]="!loginForm.valid"
                   >
                     Đăng nhập
                   </button>
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">
-                  Bạn đã quên mật khẩu?
-                  <a href="#!" class="fw-bold text-body"><u>Lấy lại mật khẩu</u></a>
+                  Bạn chưa có tài khoản?
+                  <a routerLink="/register" class="fw-bold text-body"><u>Đăng ký</u></a>
                 </p>
+                <p class="text-center text-muted">
+                  Bạn đã quên mật khẩu?
+                  <a href="#!" class="fw-bold text-body" style="color: blue !important"><u>Lấy lại mật khẩu</u></a>
+                </p>
+
               </form>
             </div>
           </div>

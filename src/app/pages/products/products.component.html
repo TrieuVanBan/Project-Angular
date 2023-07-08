@@ -8,16 +8,16 @@
       class="form-control"
       style="outline: none; margin-bottom: 20px; width: 30%"
       [(ngModel)]="searchText"
-      placeholder="Search..."
+      placeholder="Tìm kiếm ..."
     />
     <div class="items">
-      <div class="products-div" *ngFor="let item of data | search : searchText">
+      <div class="products-div" *ngFor="let item of data | paginate : { itemsPerPage: 12, currentPage: p } | search : searchText">
         <div class="product">
           <a routerLink="/detail/{{ item.id }}">
             <img class="image" src="{{ item.image }}" alt="" />
           </a>
           <div class="d-flex justify-content-between align-items-center">
-            <span class="my-2">{{ item.name }}</span>
+            <span class="my-2 name" style="font-weight: bold">{{ item.name }}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -40,3 +40,4 @@
     </div>
   </div>
 </div>
+<pagination-controls (pageChange)="p = $event" class="d-flex justify-content-end"></pagination-controls>

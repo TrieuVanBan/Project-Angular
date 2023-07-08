@@ -19,7 +19,7 @@ export class SidebarComponent {
   getAllCate() {
     this.restapiService.listCategory().subscribe((res: any) => {
       this.data = res
-      console.log(res);
+      // console.log(res);
     })
   }
 }

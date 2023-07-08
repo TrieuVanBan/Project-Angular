@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "id": 1,
-      "cateId": 1,
       "name": "Product 1",
-      "price": 100,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLx77ztv1ATlue3CVbpk9pOyP65eto4L_ZDQ&usqp=CAU"
+      "price": "200",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLx77ztv1ATlue3CVbpk9pOyP65eto4L_ZDQ&usqp=CAU",
+      "cateId": "1",
+      "id": 1
     },
     {
       "id": 2,
@@ -69,6 +69,27 @@
       "image": "https://lzd-img-global.slatic.net/g/p/f14d637731b152efa3b24a7742624c43.jpg_200x200q80.jpg_.webp",
       "cateId": "3",
       "id": 11
+    },
+    {
+      "name": "Quần âu hàn",
+      "price": "120000",
+      "image": "https://lzd-img-global.slatic.net/g/p/f7eca1b50edf0bd6d3c0a0a3189928ca.jpg_200x200q80.jpg_.webp",
+      "cateId": "2",
+      "id": 12
+    },
+    {
+      "name": "Áo hoodie a",
+      "price": "111111",
+      "image": "https://lzd-img-global.slatic.net/g/p/2809fe607178e2563f39145565ed5020.jpg_200x200q80.jpg_.webp",
+      "cateId": "1",
+      "id": 13
+    },
+    {
+      "name": "Áo sơ mi 1",
+      "price": "299000",
+      "image": "https://lzd-img-global.slatic.net/g/p/b37fbb8d20aaf9e6c9ee8b76d14c992c.jpg_200x200q80.jpg_.webp",
+      "cateId": "3",
+      "id": 14
     }
   ],
   "category": [
@@ -97,6 +118,18 @@
       "password": "$2a$10$Cq.mcQLAEi6BXQYccLb8kOO5lo3b.ge3HjHxTaLAqqMHbWJG84aKy",
       "role": "0",
       "id": 2
+    },
+    {
+      "email": "ban2002@gmail.com",
+      "password": "$2a$10$Ic1B0q2GlnlVPw2Ozgg42u6xmRFJx/xUL9ixZ8aSPYjuIIn330nym",
+      "role": "0",
+      "id": 3
+    },
+    {
+      "email": "ban123@gmail.com",
+      "password": "$2a$10$tyPS96HrqeRyu8883VV6V.qXuRTdCAlqdyED1sOmM0bESbpUPrYcq",
+      "role": "0",
+      "id": 4
     }
   ]
 }

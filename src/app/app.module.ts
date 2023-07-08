@@ -29,6 +29,7 @@ import { UpdateProductsComponent } from './pages/admin/products/update-products/
 import { ListUserComponent } from './pages/admin/users/list-user/list-user.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { SearchPipe } from './search.pipe';
+import { ModalComponent } from './modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { SearchPipe } from './search.pipe';
     ListUserComponent,
     CartComponent,
     SearchPipe,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

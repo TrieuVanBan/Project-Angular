@@ -20,6 +20,10 @@ export class LoginComponent {
     password: this.builderForm.control('', Validators.compose([Validators.required, Validators.minLength(8)])),
   })
 
+  get funcControl() {
+    return this.loginForm.controls
+  }
+
 
   loginOnsubmit() {
     this.restApi.login(this.loginForm.value).subscribe((res: any) => {
@@ -30,6 +34,8 @@ export class LoginComponent {
       this.toastr.success("Bạn đã đăng nhập thành công !", "Success")
       if (res.user.role === 1) {
         this.router.navigateByUrl("/admin")
+      } else {
+        this.router.navigateByUrl("/")
       }
     })
   }

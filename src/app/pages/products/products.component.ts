@@ -14,7 +14,8 @@ export class ProductsComponent {
   cateId: any;
   data: Product[] = [];
   dataProduct: any;
-  searchText =  ""
+  searchText = ""
+  p: number = 1
 
   constructor(private restapiService: RestapiService, private activateRoute: ActivatedRoute, private cartService: CartService, private toastr: ToastrService) { }
 
@@ -30,14 +31,14 @@ export class ProductsComponent {
   getAll() {
     this.restapiService.listProduct().subscribe((res: any) => {
       this.data = res
-      console.log(res);
+      // console.log(res);
     })
   }
 
   getProductCatId(id: any) {
     if (id) {
       this.restapiService.listProductByCate(id).subscribe((res: any) => {
-        console.log(res)
+        // console.log(res)
         this.data = res
       })
     }

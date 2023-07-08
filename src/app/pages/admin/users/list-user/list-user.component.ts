@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Auth } from "src/app/model/auth.model";
 import { RestapiService } from 'src/app/service/restapi.service';
+
 
 @Component({
   selector: 'app-list-user',
@@ -10,7 +12,7 @@ import { RestapiService } from 'src/app/service/restapi.service';
 export class ListUserComponent implements OnInit {
   p: number = 1
   users: Auth[] = []
-  
+
   constructor(private restapiService: RestapiService) { }
 
   ngOnInit(): void {
@@ -21,5 +23,9 @@ export class ListUserComponent implements OnInit {
     this.restapiService.listUsers().subscribe((res: any) => {
       this.users = res
     })
+  }
+
+  openModal() {
+
   }
 }
